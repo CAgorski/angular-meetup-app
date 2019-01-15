@@ -1,0 +1,17 @@
+<h1>{{isEdit ? 'Edit Character' : 'Create Character'}}</h1>
+<p><a routerLink="/characters">back to list</a></p>
+
+<div class="col-md-6">
+  <form [formGroup]="characterForm" (ngSubmit)="save()">
+    <div class="form-group">
+      <label class="control-label">Name</label>
+      <input type="text" class="form-control" formControlName="name"/>
+    </div>
+    <div class="form-group">
+      <label class="control-label">Race</label>
+      <input type="text" class="form-control" formControlName="race"/>
+    </div>
+
+    <button type="submit" class="btn btn-success">Save</button>
+  </form>
+</div>

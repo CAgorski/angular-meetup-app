@@ -1,0 +1,14 @@
+<h1>Characters</h1>
+<p><a routerLink="create"><i class="fa fa-plus-circle"></i> create new character</a></p>
+<table class="table table-striped table-bordered">
+<thead>
+  <th>Name</th>
+  <th>Race</th>
+</thead>
+<tbody>
+<tr *ngFor="let character of characters">
+  <td><a [routerLink]="[character.id,'edit']">{{character.name}}</a></td>
+  <td>{{character.race}}</td>
+</tr>
+</tbody>
+</table>

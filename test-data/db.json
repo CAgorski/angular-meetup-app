@@ -1,0 +1,19 @@
+{
+  "characters": [
+    {
+      "id": 1,
+      "name": "C-3PO",
+      "race": "droid"
+    },
+    {
+      "id": 2,
+      "name": "Han Solo",
+      "race": "Human"
+    },
+    {
+      "id": 3,
+      "name": "Chewbacca",
+      "race": "Wookie"
+    }
+  ]
+}
