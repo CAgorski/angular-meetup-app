@@ -14,6 +14,16 @@
       "id": 3,
       "name": "Chewbacca",
       "race": "Wookie"
+    },
+    {
+      "id": 4,
+      "name": "Kylo",
+      "race": "Ren"
+    },
+    {
+      "id": 5,
+      "name": "Kylo",
+      "race": "Ren"
     }
   ]
 }
