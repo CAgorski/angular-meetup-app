@@ -14,7 +14,6 @@ const routes: Routes = [
   {
     path: 'characters', 
     loadChildren: './characters/characters.module#CharactersModule',
-    canLoad: [AuthGuard],
     canActivate: [AuthGuard]
   },
   {path: '**', redirectTo: ''}
