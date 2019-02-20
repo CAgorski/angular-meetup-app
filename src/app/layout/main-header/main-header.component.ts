@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { AuthenticationService } from 'src/app/security/authentication.service';
+import {Router} from '@angular/router';
+import { UserContext } from 'src/app/security/user-context.model';
 
 @Component({
   selector: 'app-main-header',
@@ -7,9 +10,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MainHeaderComponent implements OnInit {
 
-  constructor() { }
+  private userContext: UserContext;
+
+  constructor(private router: Router, private authService: AuthenticationService) {
+    this.authService.userContext.subscribe(uc => this.userContext = uc);
+   }
 
   ngOnInit() {
   }
 
+  logout(){
+    this.authService.logout();
+    this.router.navigate(['/login']);
+  }  
 }

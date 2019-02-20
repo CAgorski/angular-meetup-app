@@ -1,6 +1,6 @@
 <app-main-header></app-main-header>
 <div class="container">
-  <app-main-nav></app-main-nav>
+  <app-main-nav *ngIf="userContext"></app-main-nav>
   <div class="main-content">
     <router-outlet></router-outlet>
   </div>

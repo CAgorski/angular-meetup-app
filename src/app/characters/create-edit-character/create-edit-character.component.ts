@@ -15,7 +15,10 @@ export class CreateEditCharacterComponent implements OnInit {
   public character: Character;
   public characterForm: FormGroup;
 
-  constructor(private route:ActivatedRoute,private characterService:CharacterService,private fb:FormBuilder) { }
+  constructor(
+    private route:ActivatedRoute,
+    private characterService:CharacterService,
+    private fb:FormBuilder) { }
 
   ngOnInit() {
     let id = this.route.snapshot.params.id;

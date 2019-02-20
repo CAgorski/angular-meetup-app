@@ -11,19 +11,19 @@ export class CharacterService {
 
   constructor(private http: HttpClient) { }
   public getCharacters(){
-    return this.http.get<Character[]>('http://localhost:3000/characters').pipe(catchError(this.errorHandler));
+    return this.http.get<Character[]>('/characters').pipe(catchError(this.errorHandler));
   }
 
   public getCharacter(id:number){
-    return this.http.get<Character>(`http://localhost:3000/characters/${id}`).pipe(catchError(this.errorHandler));
+    return this.http.get<Character>(`/characters/${id}`).pipe(catchError(this.errorHandler));
   }
 
   public createCharacter(character:Character){
-    return this.http.post(`http://localhost:3000/characters`,character).pipe(catchError(this.errorHandler));
+    return this.http.post(`/characters`,character).pipe(catchError(this.errorHandler));
   }
 
   public updateCharacter(character:Character){
-    return this.http.put(`http://localhost:3000/characters/${character.id}`,character).pipe(catchError(this.errorHandler));
+    return this.http.put(`/characters/${character.id}`,character).pipe(catchError(this.errorHandler));
   }
 
   private errorHandler(error: HttpErrorResponse){
